@@ -109,9 +109,8 @@ main{
   transition: 0.2s ease;
 }
 .logo>img:hover{
-  box-shadow: 0 0 50px rgba(247, 180, 0, 0.5);
-  background-color: rgba(247, 180, 0, 0.5);
-  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(247, 180, 0, 1);
+  border-radius: 100px;
   width: 45%;
 }
 .podium{
@@ -143,6 +142,7 @@ h1{
   font-weight: inherit;
   font-size: 250%;
   color: white;
+  text-shadow: 0 0 7px #0F2027;
 }
 h2{
   margin:0;
