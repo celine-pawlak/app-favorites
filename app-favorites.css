@@ -3,13 +3,13 @@ html, body{
   margin: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Special Elite', cursive;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
 body{
   background: linear-gradient(to bottom, #43C6AC, #F8FFAE);
+  font-family: 'Special Elite', cursive;
 }
 a{
   text-decoration: none;
@@ -21,11 +21,12 @@ a{
 *{
   box-sizing:border-box;
 }
+
+/* HEADER */
+
 nav{
   background-color: #51B9BD;
   box-shadow: 0 5px 10px #455C66;
-}
-.header-app-favorites{
   color:white;
   display: flex;
   flex-direction: row;
@@ -47,15 +48,21 @@ nav{
   width: 100%;
   padding: 3%;
   white-space: nowrap;
-  transition: 0.2s ease;
+  transition: background-color 0.2s ease;
+  border-radius: 20px;
 }
 .header-applis > a:hover{
-  background-color: rgba(247, 180, 0, 0.5);
-  border-radius: 20px;
+  background-color: rgba(255, 225, 139, 0.5);
+}
+nav > a{
+  transition: text-shadow 0.2s ease;
+}
+nav > a:hover{
+  text-shadow: 5px 5px 10px black;
 }
 @media (max-width: 799px)
 {
-  .header-app-favorites{
+  nav{
     flex-direction: column;
     }
   .header-applis{
@@ -65,7 +72,10 @@ nav{
     border-bottom: 1px solid white;
   }
 }
-main{
+
+/* MAIN */
+
+.main-app-favorites{
   width: 100%;
   height: 100%;
   display: flex;
@@ -79,37 +89,20 @@ main{
   height: 60%;
   margin: 1% 0 2% 0;
 }
-.number2{
+.number{
   width: 20%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.number1{
-  width: 20%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.number3{
-  width: 20%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.logo{
-  width: 100%;
-}
-.logo>img{
+.number>a>img{
   width: 40%;
   height: auto;
   transition: 0.2s ease;
 }
-.logo>img:hover{
-  box-shadow: 0 0 50px rgba(247, 180, 0, 1);
+.number>a>img:hover{
+  box-shadow: 0 0 50px rgba(255, 225, 139);
   border-radius: 100px;
   width: 45%;
 }
@@ -137,6 +130,114 @@ main{
 #podium-trois{
   height:30%;
 }
+
+/* MAIN HEADER APPLICATIONS */
+
+.main-app{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main-app1-header, .main-app2-header, .main-app3-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 15% 0 15%;
+  color:white;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+  width:100%;
+}
+.main-app1-header{
+  background-color: #1ebea5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.main-app2-header{
+  background: linear-gradient(to left,#009DF2, #37FA5E);
+  font-family: 'Exo', sans-serif;
+}
+.main-app3-header{
+  background-color: #2a2d32;
+  font-family: 'Baloo Da 2', cursive;
+}
+.logo, .logo2{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  width:50%;
+}
+.logo>img, .logo2>img{
+  height: auto;
+  padding: 1%;
+}
+.logo>img{
+  width:10%;
+}
+.logo2>img{
+  width: 30%;
+}
+.download{
+  height: 100%;
+}
+#menu-déroulant, #menu-déroulant ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#menu-déroulant{
+  text-align: center;
+  height: 100%;
+}
+#menu-déroulant li{
+  display: inline-block;
+  height: 100%;
+}
+#menu-déroulant ul li{
+  display: inherit;
+  padding: 0 1rem;
+}
+#menu-déroulant a{
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding: 10%;
+}
+#menu-déroulant ul{
+  position: absolute;
+  visibility: hidden;
+  text-align: left;
+  z-index: 1000;
+  border: 1px solid white;
+  padding: 1rem 0;
+}
+#menu-déroulant .ul-app1{
+  background-color: #1ebea5;
+  border-top: 3px solid #4FCC5D;
+}
+#menu-déroulant .ul-app2{
+  background-color: #009DF2;
+  border-top: 3px solid #37FA5E;
+}
+#menu-déroulant .ul-app3{
+  background-color: #2a2d32;
+  border-top: 3px solid white;
+}
+#menu-déroulant li:hover ul{
+  visibility: visible;
+}
+
+/* MAIN APPLICATIONS */
+
+
+
+/* OTHER */
+
 h1{
   text-align: center;
   font-weight: inherit;
@@ -154,4 +255,7 @@ h2{
   text-align: center;
   padding: 1%;
   white-space: nowrap;
+}
+ul{
+    list-style-type: none;
 }
