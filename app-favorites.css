@@ -223,6 +223,7 @@ nav > a:hover{
 #menu-déroulant ul li{
   display: inherit;
   padding: 0 1rem;
+  transition: background-color 0.2s;
 }
 #menu-déroulant a{
   display: flex;
@@ -254,6 +255,17 @@ nav > a:hover{
 }
 #menu-déroulant li:hover ul{
   visibility: visible;
+}
+#download{
+  transition: text-shadow 0.2s;
+}
+#menu-déroulant li:hover #download{
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+}
+#menu-déroulant ul li:hover{
+  background-color: rgba(255, 225, 139, 0.5);
+  border-radius: 100px;
 }
 
 /* MAIN APPLICATIONS */
@@ -290,7 +302,7 @@ hr{
 }
 #mini-logo{
   display:none;
-  width: 20%
+  width: 20%;
   height:auto;
   padding-right: 2%;
 }
@@ -362,6 +374,7 @@ hr{
 }
 
 /* MAIN CAROUSEL */
+
 .application-screenshots{
   padding: 1%;
 }
@@ -401,6 +414,41 @@ hr{
     background-color: #51B9BD;
     border-radius: 100px;
     border: 1px solid white;
+}
+
+/* FOOTER */
+
+footer{
+  border-top: 1px solid white;
+  box-shadow: 0 5px 10px black;
+  z-index:4;
+}
+footer img{
+  width:15%;
+  height:15%;
+  margin:5%;
+}
+.reseaux-app1{
+  background-color: #1ebea5;
+}
+.reseaux-app2{
+  background: linear-gradient(to left,#009DF2, #37FA5E);
+}
+.resaux-app3{
+  background-color: #2a2d32;
+}
+.reseaux{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width:800px;
+  margin: 0 auto;
+}
+.reseaux>a img:hover{
+  width:20%;
+  height:20%;
+  margin: 0;
 }
 
 /* OTHER */
